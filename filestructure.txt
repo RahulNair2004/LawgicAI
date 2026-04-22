@@ -1,0 +1,154 @@
+# AI Legal Chatbot - Project Structure
+
+```
+legal-chatbot/
+│
+├── frontend/                          # React Frontend
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   │
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── ProfileForm.jsx
+│   │   │   ├── ChatInterface.jsx
+│   │   │   ├── LawyerCard.jsx
+│   │   │   ├── ChatHistory.jsx
+│   │   │   └── LoadingSpinner.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── LoginPage.jsx
+│   │   │   ├── ProfilePage.jsx
+│   │   │   ├── ChatPage.jsx
+│   │   │   ├── FindLawyerPage.jsx
+│   │   │   └── HomePage.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── auth.js
+│   │   │   └── storage.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── constants.js
+│   │   │   ├── helpers.js
+│   │   │   └── validation.js
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── globals.css
+│   │   │   └── components.css
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── index.js
+│   │
+│   ├── package.json
+│   └── tailwind.config.js
+│
+├── backend/                           # Flask Backend
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── user.py
+│   │   │   ├── chat.py
+│   │   │   └── lawyer.py
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py
+│   │   │   ├── profile.py
+│   │   │   ├── chat.py
+│   │   │   └── lawyer.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── database.py
+│   │   │   ├── rag_service.py
+│   │   │   └── ai_chat.py
+│   │   │
+│   │   └── utils/
+│   │       ├── __init__.py
+│   │       ├── helpers.py
+│   │       └── validators.py
+│   │
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   └── database.py
+│   │
+│   ├── requirements.txt
+│   ├── run.py
+│   └── .env
+│
+├── data/                             # Data Files
+│   ├── legal_documents/
+│   │   ├── indian_law_docs/
+│   │   └── sample_cases/
+│   │
+│   └── sample_data/
+│       ├── lawyers_seed.json
+│       └── users_seed.json
+│
+├── tests/                           # Test Files
+│   ├── frontend/
+│   │   ├── components/
+│   │   └── pages/
+│   │
+│   └── backend/
+│       ├── test_routes.py
+│       └── test_models.py
+│
+├── docs/                           # Documentation
+│   ├── API.md
+│   ├── SETUP.md
+│   └── README.md
+│
+├── .gitignore
+├── README.md
+└── docker-compose.yml (optional)
+```
+
+## Key Directories Explained:
+
+### Frontend (`/frontend`)
+- **components/**: Reusable React components
+- **pages/**: Main page components with routing
+- **services/**: API calls and external service integrations
+- **utils/**: Helper functions, constants, and validation
+
+### Backend (`/backend`)
+- **models/**: MongoDB schema definitions and data models
+- **routes/**: Flask route handlers (API endpoints)
+- **services/**: Business logic (database operations, AI/RAG service)
+- **config/**: Configuration files and database setup
+
+### Data (`/data`)
+- **legal_documents/**: Documents for RAG system training
+- **sample_data/**: Seed data for development
+
+## Environment Files Needed:
+
+### Frontend `.env`:
+```
+REACT_APP_API_BASE_URL=http://localhost:5000
+REACT_APP_ENVIRONMENT=development
+```
+
+### Backend `.env`:
+```
+MONGODB_URI=your_mongodb_atlas_connection_string
+FLASK_ENV=development
+SECRET_KEY=your_secret_key
+AI_MODEL_API_KEY=your_ai_api_key
+CORS_ORIGINS=http://localhost:3000
+```
+
+## Next Steps:
+1. Set up the basic folder structure
+2. Install dependencies for both frontend and backend
+3. Configure MongoDB connection
+4. Implement the profile page (frontend + backend)
+5. Add authentication
+6. Build the AI chatbot integration
+7. Create lawyer discovery feature

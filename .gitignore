@@ -1,0 +1,29 @@
+# Environment variables (MOST IMPORTANT)
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Secrets / keys
+*.pem
+*.key
+*.crt
+secrets.json
+config.json
