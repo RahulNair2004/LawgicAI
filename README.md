@@ -59,30 +59,6 @@ Final Context-Aware Answer
 
 ---
 
-## 📁 Project Structure
-
-
-LawgicAI/
-├── backend/
-│ ├── api/
-│ ├── services/
-│ ├── utils/
-│ ├── vector_store/
-│ ├── app.py
-│ └── config.py
-│
-├── frontend/
-│ ├── src/
-│ ├── public/
-│ └── package.json
-│
-├── .gitignore
-├── README.md
-└── .env.example
-
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
